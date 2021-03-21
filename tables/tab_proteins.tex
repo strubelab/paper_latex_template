@@ -1,0 +1,58 @@
+%% Constructs Table for supplement
+
+\begin{table}[htp]
+
+%%%%%%%%
+%% Title
+  \parbox{1.0\columnwidth}{\caption[Protein properties]{\label{stab:proteins}
+      Proteins expressed in this study.}}
+
+  \renewcommand{\arraystretch}{1.2}  %% increase line spacing
+
+  \begin{tabular*}{1.0\columnwidth}{llccccc}
+
+    %%%%%%%%%
+    %% Header
+    \toprule
+    expressed from &
+    composition &
+    length &
+    size &
+    $\epsilon_{280}$ &
+    $\lambda_{ex}$ &
+    $\lambda_{em}$ 
+    \\
+    &
+    &
+    (aa) &
+    (kD) &
+    $(M cm)^{-1}$&
+    (nm) &
+    (nm)
+    \\
+    \midrule
+
+    %%%%%%%
+    %% Body
+
+    me0052, rgf0049 & ALS-mScarletI-SpyTag-2Strep &
+    449 & 49.0 & 60,850 & 569 & 593 \\
+
+    rg3032, rgf0047 & FKBP-mNeon-WW-2Strep &
+    447 & 48.9 & 77,810 & 506 & 517 \\
+
+    sb0215, rgf0048 & 2Strep-LssmOrange-SpyTag &
+    298 & 33.0 & 41,370 & 437 & 572 \\
+
+    sb0201 & Bxb1-His$_{10}$ &
+    515 & 58.1 & 86.400 & - & - \\
+
+
+    %%%%%%%%%
+    %% Footer
+    \bottomrule 
+    \bottomrule
+
+  \end{tabular*}
+\end{table}
+
