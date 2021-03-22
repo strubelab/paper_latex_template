@@ -9,5 +9,7 @@ rm **/*.lof
 rm **/*.lot
 rm **/*.toc
 rm **/*.toc
+rm **/*.xml
+rm **/*.bcf
 
 
