@@ -1,4 +1,4 @@
-# paper_template
+# paper template
 
 LaTeX template for scientific paper. Includes examples of bibliography, and figure / table references to a supplemental file. The main document is `manuscript.tex`. The `supplement.tex` document is where you can create a supplemental information document. The template uses only Latex-built-in classes and styles. Many journals define their own templates, document classes or citation styles. 
 
