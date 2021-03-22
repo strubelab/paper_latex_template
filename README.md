@@ -11,14 +11,15 @@ Local setup:
 
   (1) You need TexLive to compile the document. On OSX, the full package can be installed with `homebrew`:
 
-        ```brew install texlive```
+        brew install texlive
 
   (2) The compile and clean scripts assume you have `zsh` installed (alternatively, replace the zsh command within the script by `bash`):
 
-        ```brew install zsh```
+        brew install zsh
  
   (3) It's a good idea to track the project on github. Install git with homebrew:
 
-        - ```brew install git```
-        - copy the template repository into a new repository on github
-        - then create a local copy: `git clone http://...` (the link is displayed in the repo page on github)
+        brew install git
+
+   - copy the template repository into a new repository on github
+   - then create a local copy: `git clone http://...` (the link is displayed in the repo page on github)
