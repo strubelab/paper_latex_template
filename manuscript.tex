@@ -75,9 +75,11 @@
 %\doublespacing
 %\setstretch{1.1}
 
-%% Referencing to external documents
+%% Referencing to external documents -- simply refer to the figure or table label
+%% by \ref{label}. The supplement.tex file defines a prefix ("S") that will be
+%% added to the number in the final compiled document (i.e. Table S1). 
 \usepackage{xr}
-\externaldocument[S]{supplement}
+\externaldocument{supplement}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Place any additional macros here.  Please use \newcommand* where
