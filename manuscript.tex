@@ -1,3 +1,8 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Compile document with three commands:
+%%    pdflatex manuscript; biber manuscript; pdflatex manuscript
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \documentclass[10pt]{article}
 \usepackage{fullpage}
 \addtolength{\textheight}{+40pt}
@@ -9,7 +14,27 @@
 \usepackage{graphicx}
 
 \usepackage[T1]{fontenc}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% References / Bibliography management
+%%     see: https://tex.stackexchange.com/questions/26516/how-to-use-biber
+%%     see: https://es.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[autostyle]{csquotes}
+
+\usepackage[
+  backend=biber,
+  style=numeric-comp,
+  natbib=true,
+  url=false,
+  doi=true,
+  eprint=false,
+]{biblatex}
+
+\addbibresource{references.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Place any additional packages needed here.  Only include packages
@@ -81,16 +106,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
 \begin{document}
 
-\title{From DNA on beads to proteins in a million droplets}
+\title{Fantastic Paper Title}
 
 \author[1,2]{Ana Maria Restrepo Sierra}
 \author[1]{Stefan Arold}
 \author[1]{Raik Gr\"unberg}
 \affil[1]
-      {Department of Biological and Environmental Sciences and Engineering, King
+      {\small Department of Biological and Environmental Sciences and Engineering, King
         Abdullah University of Science and Technology, Thuwal, Saudi Arabia}
 \affil[2]
-      {present address: ...Delft...}
+      {\small present address: Delft...}
 
 \date{}                %% remove date
 
@@ -104,21 +129,21 @@
 \pagenumbering{arabic}  %% switch page numbering back on
 
 \begin{abstract}
-Write your abstract here.
+Write your nice and concise abstract here.
 \end{abstract}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% INTRODUCTION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{INTRODUCTION}
+\section*{Introduction}
 
 Lots of work has already been done \cite{Buchner1897}. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% METHODS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{METHODS}
+\section*{Methods}
 
 \subsection*{DNA constructs}
 DNA constructs used in this study are described in Table~\ref{stab:proteins} in Supplemental Materials. 
@@ -127,7 +152,7 @@ DNA constructs used in this study are described in Table~\ref{stab:proteins} in 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% RESULTS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{RESULTS}
+\section*{Results}
 
 \subsection*{The initial experiment}
 
@@ -152,23 +177,23 @@ Your conclusion
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ACKNOWLEDGEMENTS 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{ACKNOWLEDGMENTS}
+\section*{Acknowledgements}
 
 This work was supported by ...
 
 
-\section*{AUTHOR CONTRIBUTIONS}
+\section*{Author Contributions}
 
 A did this. B did that.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% The appropriate \bibliography command should be placed here.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{natbib}
-\bibliography{references}
 
 \section*{Competing Financial Interests}
 
 The authors declare no competing financial interests.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The appropriate \bibliography command should be placed here.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
 
 \end{document}
