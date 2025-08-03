@@ -12,6 +12,7 @@ Local setup:
   (1) You need TexLive to compile the document. On OSX, the full package can be installed with `homebrew`:
 
         brew install texlive
+        brew install biber
 
   (2) The compile and clean scripts assume you have `zsh` installed (alternatively, replace the zsh command within the script by `bash`):
 
